@@ -208,7 +208,7 @@
             <div class="space-y-5 flex-shrink-0 lg:w-7/12">
 
                 <!-- post 1-->
-
+                <!--post reversed for new at top-->
                 {% for post in posts reversed %}
                 <div class="bg-white shadow rounded-md  -mx-2 lg:mx-0">
 
@@ -266,13 +266,14 @@
                         </div>
                     </div>
 
+                     {% comment %} post image {% endcomment %}
                     <div uk-lightbox>
                         <a href="{{post.image.url}}">
                             <img src="{{post.image.url}}" alt="">
                         </a>
                     </div>
 
-
+                    <!--like-post-->
                     <div class="py-3 px-4 space-y-3">
 
                         <div class="flex space-x-4 lg:font-bold">
@@ -325,6 +326,8 @@
                                     </div>
                                 </div> -->
 
+
+                                {% comment %} post caption {% endcomment %}
                         <p>
                             <a href="/profile/{{post.user}}"><strong>{{post.user}}</strong></a> {{post.caption}}
                         </p>
